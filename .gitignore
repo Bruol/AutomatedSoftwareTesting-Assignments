@@ -25,3 +25,7 @@ out.html
 out.css
 out.functions.html
 out.*.html
+
+
+*.zip
+*.sh

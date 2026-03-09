@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+
+# IDE/editor
+.vscode/
+
+# C/C++ build outputs
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+*.exe
+*.out
+a.out
+*.dSYM/
+
+# Coverage artifacts
+*.gcda
+*.gcno
+*.gcov
+
+# Coverage reports
+out.html
+out.css
+out.functions.html
+out.*.html

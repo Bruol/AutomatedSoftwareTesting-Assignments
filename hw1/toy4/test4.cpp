@@ -1,23 +1,27 @@
 #include "prime.h"
-#include <iostream>
 #include <functional>
+#include <iostream>
 
-bool test_prime(int in, bool out) {
-    return is_prime(in) == out;
-}
+bool test_prime(int in, bool out) { return is_prime(in) == out; }
 
-// TODO add test cases to achieve 100% branch coverage (taken at least once) in prime.cpp
-std::function<bool()> tests[] = {
-        [] () { return test_prime(2, true); }
-};
+// TODO add test cases to achieve 100% branch coverage (taken at least once) in
+// prime.cpp
+std::function<bool()> tests[] = {[]() { return test_prime(2, true); },
+                                 []() { return test_prime(3, true); },
+                                 []() { return test_prime(9, true); },
+                                 []() { return test_prime(11, true); },
+                                 []() { return test_prime(29, true); },
+                                 []() { return test_prime(25, true); },
+                                 []() { return test_prime(49, true); },
+                                 []() { return test_prime(0, true); },
+                                 []() { return test_prime(4, true); }};
 
 int main() {
-    unsigned ran = 0, passed = 0;
-    for (auto test : tests) {
-        ran++;
-        passed += test();
-    }
-    std::cout << "Passed " << passed << "/" << ran << " test cases!" << std::endl;
-    return 0;
+  unsigned ran = 0, passed = 0;
+  for (auto test : tests) {
+    ran++;
+    passed += test();
+  }
+  std::cout << "Passed " << passed << "/" << ran << " test cases!" << std::endl;
+  return 0;
 }
-

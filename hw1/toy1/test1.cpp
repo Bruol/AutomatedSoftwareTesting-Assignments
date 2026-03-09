@@ -13,7 +13,8 @@ bool test_fizzbuzz(unsigned in, std::string out) {
 
 // TODO use exactly two (!) test cases to achieve 100% line coverage in fizzbuzz.cpp
 std::function<bool()> tests[] = {
-    [] () { return test_fizzbuzz(1, "1"); }
+    [] () { return test_fizzbuzz(1, "1"); },
+    [] () { return test_fizzbuzz(0, "FizzBuzz"); }
 };
 
 int main() {

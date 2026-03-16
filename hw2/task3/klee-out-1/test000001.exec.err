@@ -1,9 +1,0 @@
-Error: external call with symbolic argument: printf
-File: binary_search.c
-Line: 9
-assembly.ll line: 32
-State: 1
-Stack: 
-	#000000032 in print_data(arr=139526182174720, size=10, target=symbolic) at binary_search.c:9
-	#100000090 in binary_search(arr=139526182174720, size=10, target=symbolic) at binary_search.c:19
-	#200000207 in main() at binary_search.c:57

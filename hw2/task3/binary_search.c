@@ -2,7 +2,7 @@
 #include <assert.h>
 #include "klee/klee.h"
 
-#define DEBUG
+// #define DEBUG
 
 #ifdef DEBUG
 void print_data(int arr[], int size, int target) {

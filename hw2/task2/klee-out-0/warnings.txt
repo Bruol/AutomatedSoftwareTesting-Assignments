@@ -1,0 +1,4 @@
+KLEE: WARNING: undefined reference to function: printf
+KLEE: WARNING: undefined reference to function: sleep
+KLEE: WARNING ONCE: calling external: printf(140720719953920, 12, 10) at maze.c:66 32
+KLEE: WARNING ONCE: calling external: sleep(1) at maze.c:77 2

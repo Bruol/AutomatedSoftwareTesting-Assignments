@@ -1,0 +1,23 @@
+klee binary_search.bc
+PID: 588
+Using monotonic steady clock with 1/1000000000s resolution
+Started: 2026-03-16 14:58:07
+BEGIN searcher description
+<InterleavedSearcher> containing 2 searchers:
+RandomPathSearcher
+WeightedRandomSearcher::CoveringNew
+</InterleavedSearcher>
+END searcher description
+Finished: 2026-03-16 14:58:12
+Elapsed: 00:00:05
+KLEE: done: explored paths = 66
+KLEE: done: avg. constructs per query = 357
+KLEE: done: total queries = 129
+KLEE: done: valid queries = 55
+KLEE: done: invalid queries = 74
+KLEE: done: query cex = 129
+
+KLEE: done: total instructions = 2441
+KLEE: done: completed paths = 11
+KLEE: done: partially completed paths = 55
+KLEE: done: generated tests = 12

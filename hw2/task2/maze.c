@@ -54,6 +54,7 @@ int main(int argc, char *argv[])
 	int i = 0;	// Iteration number
 #define ITERS 38
 	char program[ITERS];
+	klee_make_symbolic(program, sizeof(program), "program");
 
 	// Initial position
 	x = 5;
@@ -70,7 +71,7 @@ int main(int argc, char *argv[])
 	// Draw the maze
 	draw();
 	// Read the directions 'program' to execute...
-	read(0, program, ITERS);
+	// read(0, program, ITERS);
 
 	// Iterate and run 'program'
 	while (i < ITERS)
@@ -96,6 +97,7 @@ int main(int argc, char *argv[])
 		default:
 			printf("Wrong command!(only w,s,a,d accepted!)\n");
 			printf("You lose!\n");
+
 			exit(-1);
 		}
 
@@ -104,6 +106,7 @@ int main(int argc, char *argv[])
 		{
 			printf("You win!\n");
 			printf("Your solution <%42s>\n", program);
+			klee_assert(0);
 			exit(1);
 		}
 		// If something is wrong do not advance

@@ -2,7 +2,7 @@
 #include <assert.h>
 #include "klee/klee.h"
 
-// #define DEBUG
+#define DEBUG
 
 #ifdef DEBUG
 void print_data(int arr[], int size, int target) {
@@ -22,7 +22,7 @@ int binary_search(int arr[], int size, int target) {
     int right = size;
     while (left < right) {
         int mid = (left + right) / 2;
-        if (target < arr[mid]) {
+        if (target <= arr[mid]) {
             right = mid;
         } else {
             left = mid + 1;
@@ -31,20 +31,28 @@ int binary_search(int arr[], int size, int target) {
     return left;
 }
 
-/*
-int is_sorted(int arr[], int size) {
+
+void is_sorted(int arr[], int size) {
+    for (int i=0; i < size-1; i++) {
+        klee_assume(arr[i] <= arr[i+1]);
+    }
+    return ;
 }
-*/
+
 
 int main() {
     int a[10];
+    klee_make_symbolic(a, sizeof(a), "a");
     int x;
-    printf("Please input an sorted array of 10 integers: ");
-    for (int i = 0; i < 10; i++) {
-        scanf("%d", &a[i]);
-    }
-    printf("Please input an integer: ");
-    scanf("%d", &x);
+    klee_make_symbolic(&x, sizeof(x), "x");
+    // printf("Please input an sorted array of 10 integers: ");
+    // for (int i = 0; i < 10; i++) {
+    //     scanf("%d", &a[i]);
+    // }
+    // printf("Please input an integer: ");
+    // scanf("%d", &x);
+
+    is_sorted(a, 10);
 
     int pos = binary_search(a, 10, x);
     #ifdef DEBUG

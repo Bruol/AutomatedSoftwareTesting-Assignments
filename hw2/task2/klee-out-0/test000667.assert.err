@@ -1,0 +1,7 @@
+Error: ASSERTION FAIL: 0
+File: maze.c
+Line: 109
+assembly.ll line: 197
+State: 678
+Stack: 
+	#000000197 in main(argc=1, argv=140734678597632) at maze.c:109

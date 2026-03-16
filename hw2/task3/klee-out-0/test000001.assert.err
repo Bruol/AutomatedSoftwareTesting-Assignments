@@ -1,0 +1,7 @@
+Error: ASSERTION FAIL: a[i] < x
+File: binary_search.c
+Line: 64
+assembly.ll line: 170
+State: 11
+Stack: 
+	#000000170 in main() at binary_search.c:64

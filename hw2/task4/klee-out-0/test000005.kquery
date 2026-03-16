@@ -1,0 +1,10 @@
+array arg00[5] : w32 -> w8 = symbolic
+array arg01[5] : w32 -> w8 = symbolic
+(query [(Eq 52 (Read w8 0 arg00))
+         (Eq 50 (Read w8 1 arg00))
+         (Eq 0 (Read w8 2 arg00))
+         (Eq 108 (Read w8 0 arg01))
+         (Eq 105 (Read w8 1 arg01))
+         (Eq 102 (Read w8 2 arg01))
+         (Eq 101 (Read w8 3 arg01))]
+        false)

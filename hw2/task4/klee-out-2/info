@@ -1,0 +1,23 @@
+klee -libc=uclibc -posix-runtime password.bc -sym-files 1 12 A
+PID: 1205
+Using monotonic steady clock with 1/1000000000s resolution
+Started: 2026-03-16 15:31:04
+BEGIN searcher description
+<InterleavedSearcher> containing 2 searchers:
+RandomPathSearcher
+WeightedRandomSearcher::CoveringNew
+</InterleavedSearcher>
+END searcher description
+Finished: 2026-03-16 15:31:04
+Elapsed: 00:00:00
+KLEE: done: explored paths = 12
+KLEE: done: avg. constructs per query = 20
+KLEE: done: total queries = 28
+KLEE: done: valid queries = 1
+KLEE: done: invalid queries = 27
+KLEE: done: query cex = 28
+
+KLEE: done: total instructions = 21983
+KLEE: done: completed paths = 11
+KLEE: done: partially completed paths = 1
+KLEE: done: generated tests = 12

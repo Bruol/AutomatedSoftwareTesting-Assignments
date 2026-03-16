@@ -1,0 +1,10 @@
+Error: ASSERTION FAIL: 0
+File: password.c
+Line: 46
+assembly.ll line: 8948
+State: 1
+Stack: 
+	#000008948 in __klee_posix_wrapped_main(argc=2, argv=139925614133248) at password.c:46
+	#100007099 in __user_main(argcPtr=5, argvPtr=140734678597632, envp=140734678597680) at klee_src/runtime/POSIX/klee_init_env.c:244
+	#200000513 in __uClibc_main(main=140718832517120, argc=5, argv=140734678597632, app_init=0, app_fini=0, rtld_fini=0, stack_end=0) at libc/misc/internals/__uClibc_main.c:401
+	#300000681 in main(5, 140734678597632)

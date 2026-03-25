@@ -1,0 +1,4 @@
+[submodule "hw3/afl-assignment/afl-training/challenges/heartbleed/openssl"]
+	path = hw3/afl-assignment/afl-training/challenges/heartbleed/openssl
+	url = https://github.com/openssl/openssl.git
+	branch = OpenSSL_1_0_1f
